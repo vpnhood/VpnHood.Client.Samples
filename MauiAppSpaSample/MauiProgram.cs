@@ -24,6 +24,7 @@ public static class MauiProgram
 #endif
 
         var resources = VpnHoodAppResource.Resources;
+        resources.Strings.AppName = "VpnHood Client Sample";
         VpnHoodApp.Init(vpnHoodDevice, new AppOptions() { Resources = resources });
 
         return builder.Build();
