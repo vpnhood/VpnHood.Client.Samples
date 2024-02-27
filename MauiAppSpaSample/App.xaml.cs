@@ -1,6 +1,4 @@
-﻿using MauiAppSample;
-
-namespace VpnHood.Client.Samples.MauiAppSpaSample;
+﻿namespace VpnHood.Client.Samples.MauiAppSpaSample;
 
 public partial class App : Application
 {
@@ -8,6 +6,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new AppShell();
+        MainPage = new MainPage();
     }
 }

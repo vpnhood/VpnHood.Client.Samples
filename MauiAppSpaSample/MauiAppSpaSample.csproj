@@ -67,6 +67,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="VpnHood.Client.App" Version="3.3.470" />
 		<PackageReference Include="VpnHood.Client.App.Resources" Version="3.3.470" />
+		<PackageReference Include="VpnHood.Client.App.WebServer" Version="3.3.470" />
 		<PackageReference Include="VpnHood.Client.Device.WinDivert" Version="3.3.470" />
 	</ItemGroup>
 

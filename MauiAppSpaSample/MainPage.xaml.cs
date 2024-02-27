@@ -1,23 +1,43 @@
-﻿namespace MauiAppSample;
+﻿using VpnHood.Client.App;
+using VpnHood.Client.App.WebServer;
+
+namespace VpnHood.Client.Samples.MauiAppSpaSample;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
-
     public MainPage()
     {
-            InitializeComponent();
+        InitializeComponent();
+
+        // Initialize UI
+        if (!VpnHoodAppWebServer.IsInit)
+        {
+            ArgumentNullException.ThrowIfNull(VpnHoodApp.Instance.Resources.SpaZipData);
+            using var memoryStream = new MemoryStream(VpnHoodApp.Instance.Resources.SpaZipData);
+            VpnHoodAppWebServer.Init(memoryStream);
         }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+        MainWebView.Source = VpnHoodAppWebServer.Instance.Url.AbsoluteUri;
+        MainWebView.Navigated += MainWebView_Navigated;
+    }
+
+    private void MainWebView_Navigated(object? sender, WebNavigatedEventArgs e)
     {
-            count++;
+        _ = HideSplashScreen();
+    }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+    private async Task HideSplashScreen()
+    {
+        await SplashScreen.FadeTo(0, 2000);
+        MainLayout.Remove(SplashScreen);
+    }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+    protected override bool OnBackButtonPressed()
+    {
+        if (!MainWebView.CanGoBack)
+            return base.OnBackButtonPressed();
+
+        MainWebView.GoBack();
+        return true;
+    }
 }

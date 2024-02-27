@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using VpnHood.Client.App;
 using VpnHood.Client.App.Resources;
+using VpnHood.Client.App.WebServer;
 using VpnHood.Client.Device;
 
 namespace VpnHood.Client.Samples.MauiAppSpaSample;
