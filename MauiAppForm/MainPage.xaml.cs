@@ -1,24 +1,63 @@
-﻿namespace MauiAppForm;
+﻿using VpnHood.Client.App;
+
+namespace VpnHood.Client.Samples.MauiAppForm;
 
 // ReSharper disable once RedundantExtendsListEntry
 public partial class MainPage : ContentPage
 {
-    int count = 0;
+    private static AppConnectionState ConnectionState => VpnHoodApp.Instance.State.ConnectionState;
 
     public MainPage()
     {
         InitializeComponent();
+        UpdateUi();
+        VpnHoodApp.Instance.ConnectionStateChanged += (_, _) => UpdateUi();
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    private void OnConnectClicked(object sender, EventArgs e)
     {
-        count++;
+        _ = ConnectTask();
+    }
 
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
+    private async Task ConnectTask()
+    {
+        try
+        {
+            // disconnect if already connected
+            if (ConnectionState is AppConnectionState.Connecting or AppConnectionState.Connected)
+            {
+                await VpnHoodApp.Instance.Disconnect();
+                return;
+            }
 
-        SemanticScreenReader.Announce(CounterBtn.Text);
+            // Connect
+            await VpnHoodApp.Instance.Connect();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private void UpdateUi()
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            if (ConnectionState is AppConnectionState.None)
+            {
+                CounterBtn.Text = "Connect";
+                StatusLabel.Text = "Disconnected";
+            }
+            else if (ConnectionState is AppConnectionState.Connecting)
+            {
+                CounterBtn.Text = "Disconnect";
+                StatusLabel.Text = "Connecting";
+            }
+            else if (ConnectionState is AppConnectionState.Connected)
+            {
+                CounterBtn.Text = "Disconnect";
+                StatusLabel.Text = "Connected";
+            }
+        });
     }
 }

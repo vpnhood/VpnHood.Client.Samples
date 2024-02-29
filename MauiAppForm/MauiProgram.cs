@@ -11,7 +11,7 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder
-            .UseMauiApp<global::MauiAppForm.App>()
+            .UseMauiApp<global::VpnHood.Client.Samples.MauiAppForm.App>()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
