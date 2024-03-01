@@ -1,14 +1,15 @@
 ﻿using Microsoft.Extensions.Logging;
-using VpnHood.Client.App;
-using VpnHood.Client.App.Resources;
 using VpnHood.Client.Device;
 
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.Client.Samples.MauiCoreForm;
 
 public static class MauiProgram
 {
+    public static IDevice VpnHoodDevice { get; private set; } = default!;
     public static MauiApp CreateMauiApp(IDevice vpnHoodDevice)
     {
+        VpnHoodDevice = vpnHoodDevice;
+
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
@@ -21,10 +22,6 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
-        var resources = VpnHoodAppResource.Resources;
-        resources.Strings.AppName = "VpnHood Maui App SPA Sample";
-        VpnHoodApp.Init(vpnHoodDevice, new AppOptions() { Resources = resources });
 
         return builder.Build();
     }

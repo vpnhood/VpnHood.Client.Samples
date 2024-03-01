@@ -11,7 +11,7 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder
-            .UseMauiApp<global::VpnHood.Client.Samples.MauiAppForm.App>()
+            .UseMauiApp<App>()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -23,7 +23,7 @@ public static class MauiProgram
 #endif
 
         var resources = VpnHoodAppResource.Resources;
-        resources.Strings.AppName = "VpnHood Client Sample";
+        resources.Strings.AppName = "VpnHood Maui App Form Sample";
         VpnHoodApp.Init(vpnHoodDevice, new AppOptions() { Resources = resources });
 
         return builder.Build();

@@ -5,8 +5,6 @@ namespace VpnHood.Client.Samples.MauiAppForm;
 // ReSharper disable once RedundantExtendsListEntry
 public partial class MainPage : ContentPage
 {
-    private static AppConnectionState ConnectionState => VpnHoodApp.Instance.State.ConnectionState;
-
     public MainPage()
     {
         InitializeComponent();
@@ -23,15 +21,11 @@ public partial class MainPage : ContentPage
     {
         try
         {
-            // disconnect if already connected
-            if (ConnectionState is AppConnectionState.Connecting or AppConnectionState.Connected)
-            {
-                await VpnHoodApp.Instance.Disconnect();
-                return;
-            }
+            if (VpnHoodApp.Instance.State.CanConnect)
+                await VpnHoodApp.Instance.Connect();
 
-            // Connect
-            await VpnHoodApp.Instance.Connect();
+            else if (VpnHoodApp.Instance.State.CanDisconnect)
+                await VpnHoodApp.Instance.Disconnect(true);
         }
         catch (Exception ex)
         {
@@ -43,21 +37,9 @@ public partial class MainPage : ContentPage
     {
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            if (ConnectionState is AppConnectionState.None)
-            {
-                CounterBtn.Text = "Connect";
-                StatusLabel.Text = "Disconnected";
-            }
-            else if (ConnectionState is AppConnectionState.Connecting)
-            {
-                CounterBtn.Text = "Disconnect";
-                StatusLabel.Text = "Connecting";
-            }
-            else if (ConnectionState is AppConnectionState.Connected)
-            {
-                CounterBtn.Text = "Disconnect";
-                StatusLabel.Text = "Connected";
-            }
+            StatusLabel.Text = VpnHoodApp.Instance.State.ConnectionState.ToString();
+            CounterBtn.IsEnabled = VpnHoodApp.Instance.State.CanConnect || VpnHoodApp.Instance.State.CanDisconnect;
+            CounterBtn.Text = VpnHoodApp.Instance.State.CanConnect ? "Connect" : "Disconnect";
         });
     }
 }
