@@ -1,4 +1,5 @@
-﻿using VpnHood.Client.Device.Droid;
+﻿using Android.Graphics;
+using VpnHood.Client.Device.Droid;
 using VpnHood.Client.Device.Droid.Utils;
 using VpnHood.Common;
 
@@ -22,15 +23,35 @@ public class MainActivity : ActivityEvent
         Device.Prepare(this);
 
         // Set our simple view
-        var linearLayout = new LinearLayout(this);
+        var mainView = new LinearLayout(this);
+        mainView.SetPadding(20, 10, 20, 10);
+        mainView.Orientation = Orientation.Vertical;
 
+        // button and status
+        var linearLayout = new LinearLayout(this);
         _connectButton = new Button(this);
         _connectButton.Click += ConnectButton_Click;
         linearLayout.AddView(_connectButton);
 
         _statusTextView = new TextView(this);
+        _statusTextView.SetTextColor(Color.DarkGreen);
         linearLayout.AddView(_statusTextView);
-        SetContentView(linearLayout);
+        mainView.AddView(linearLayout);
+
+        // notes
+        var note1 = new TextView(this);
+        note1.SetPadding(note1.PaddingLeft, note1.PaddingTop + 30, note1.PaddingRight, note1.PaddingBottom);
+        note1.SetTextColor(Color.IndianRed);
+        note1.Text = "This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.Client.App, which provides a comprehensive set of extended functionalities.";
+        mainView.AddView(note1);
+
+        var note2 = new TextView(this);
+        note2.SetPadding(note2.PaddingLeft, note2.PaddingTop + 30, note2.PaddingRight, note2.PaddingBottom);
+        note2.SetTextColor(Color.Black);
+        note2.Text = "* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues";
+        mainView.AddView(note2);
+
+        SetContentView(mainView);
         UpdateUi();
     }
 
