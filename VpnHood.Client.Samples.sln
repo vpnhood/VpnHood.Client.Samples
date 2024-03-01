@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppForm", "MauiAppForm\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCoreForm", "MauiCoreForm\MauiCoreForm.csproj", "{93AC8755-A524-416A-AB49-081E5A31BB9C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidCoreForm", "AndroidCoreForm\AndroidCoreForm.csproj", "{433A2E2B-FD65-4FC8-965D-3FB891745D6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinCoreConsole", "WinCoreForm\WinCoreConsole.csproj", "{44540289-D825-44F4-BE79-66D6B6B65E7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,16 @@ Global
 		{93AC8755-A524-416A-AB49-081E5A31BB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93AC8755-A524-416A-AB49-081E5A31BB9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93AC8755-A524-416A-AB49-081E5A31BB9C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433A2E2B-FD65-4FC8-965D-3FB891745D6F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{44540289-D825-44F4-BE79-66D6B6B65E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44540289-D825-44F4-BE79-66D6B6B65E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44540289-D825-44F4-BE79-66D6B6B65E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44540289-D825-44F4-BE79-66D6B6B65E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
