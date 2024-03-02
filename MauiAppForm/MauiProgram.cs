@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
 using VpnHood.Client.App;
+using VpnHood.Client.App.Maui.Common;
 using VpnHood.Client.App.Resources;
-using VpnHood.Client.Device;
 
 namespace VpnHood.Client.Samples.MauiAppForm;
 
 public static class MauiProgram
 {
-    public static MauiApp CreateMauiApp(IDevice vpnHoodDevice)
+    public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();
         builder
@@ -18,13 +18,13 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
+        var resources = VpnHoodAppResource.Resources;
+        resources.Strings.AppName = "VpnHood Client Sample";
+        VpnHoodMauiApp.Init(new AppOptions { Resources = resources });
+
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
-        var resources = VpnHoodAppResource.Resources;
-        resources.Strings.AppName = "VpnHood Maui App Form Sample";
-        VpnHoodApp.Init(vpnHoodDevice, new AppOptions() { Resources = resources });
 
         return builder.Build();
     }

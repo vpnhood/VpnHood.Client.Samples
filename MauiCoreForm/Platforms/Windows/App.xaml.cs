@@ -11,11 +11,6 @@ namespace VpnHood.Client.Samples.MauiCoreForm.WinUI;
 // ReSharper disable once RedundantExtendsListEntry
 public partial class App : MauiWinUIApplication
 {
-    protected override MauiApp CreateMauiApp()
-    {
-        return MauiProgram.CreateMauiApp(new WinDivertDevice());
-    }
-
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -24,5 +19,10 @@ public partial class App : MauiWinUIApplication
     {
         InitializeComponent();
     }
-    
+
+    protected override MauiApp CreateMauiApp()
+    {
+        return MauiProgram.CreateMauiApp(new WinDivertDevice());
+    }
+
 }
