@@ -10,7 +10,7 @@ namespace VpnHood.Client.Samples.AndroidCoreForm;
 // ReSharper disable once UnusedMember.Global
 public class MainActivity : ActivityEvent
 {
-    private static readonly AndroidDevice Device = new();
+    private static readonly AndroidDevice Device = AndroidDevice.Create();
     private VpnHoodClient? _vpnHoodClient;
     private Button _connectButton = default!;
     private TextView _statusTextView = default!;
