@@ -1,3 +1,6 @@
+Write-Host 
+Write-Host "*** Updating Samples" -BackgroundColor Blue;
+
 # update
 $solutionDir = $PSScriptRoot;
 $gitDir = "$solutionDir/.git";
