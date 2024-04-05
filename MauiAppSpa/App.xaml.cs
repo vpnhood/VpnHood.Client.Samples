@@ -15,9 +15,9 @@ public partial class App : Application
     protected override Window CreateWindow(IActivationState? activationState)
     {
         var window = base.CreateWindow(activationState);
-        window.Width = VpnHoodApp.Instance.Resources.WindowSize.Width;
-        window.Height = VpnHoodApp.Instance.Resources.WindowSize.Height;
-        window.Title = VpnHoodApp.Instance.Resources.Strings.AppName;
+        window.Width = VpnHoodApp.Instance.Resource.WindowSize.Width;
+        window.Height = VpnHoodApp.Instance.Resource.WindowSize.Height;
+        window.Title = VpnHoodApp.Instance.Resource.Strings.AppName;
         return window;
     }
 

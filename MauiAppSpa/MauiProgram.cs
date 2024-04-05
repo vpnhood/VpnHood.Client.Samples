@@ -19,13 +19,13 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        var resources = VpnHoodAppResource.Resources;
-        resources.Strings.AppName = "VpnHood Client Sample";
-        VpnHoodMauiApp.Init(new AppOptions { Resources = resources });
+        var resource = DefaultAppResource.Resource;
+        resource.Strings.AppName = "VpnHood Client Sample";
+        VpnHoodMauiApp.Init(new AppOptions { Resource = resource });
 
         // init web server with spa zip data
-        ArgumentNullException.ThrowIfNull(VpnHoodApp.Instance.Resources.SpaZipData);
-        using var memoryStream = new MemoryStream(VpnHoodApp.Instance.Resources.SpaZipData);
+        ArgumentNullException.ThrowIfNull(VpnHoodApp.Instance.Resource.SpaZipData);
+        using var memoryStream = new MemoryStream(VpnHoodApp.Instance.Resource.SpaZipData);
         VpnHoodAppWebServer.Init(memoryStream);
 
 #if DEBUG

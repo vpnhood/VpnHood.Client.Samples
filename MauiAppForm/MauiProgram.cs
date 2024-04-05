@@ -18,9 +18,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        var resources = VpnHoodAppResource.Resources;
-        resources.Strings.AppName = "VpnHood Client Sample";
-        VpnHoodMauiApp.Init(new AppOptions { Resources = resources });
+        var resource = DefaultAppResource.Resource;
+        resource.Strings.AppName = "VpnHood Client Sample";
+        VpnHoodMauiApp.Init(new AppOptions { Resource = resource });
 
 #if DEBUG
         builder.Logging.AddDebug();
