@@ -5,6 +5,7 @@ namespace VpnHood.Client.Samples.MauiCoreForm;
 
 public static class MauiProgram
 {
+    public static IUiContext? CurrentUiContext { get; set; }
     public static IDevice VpnHoodDevice { get; private set; } = default!;
     public static MauiApp CreateMauiApp(IDevice vpnHoodDevice)
     {

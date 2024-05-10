@@ -22,10 +22,15 @@ namespace VpnHood.Client.Samples.MauiCoreForm;
 [IntentFilter([TileService.ActionQsTilePreferences])]
 public class MainActivity : MauiActivityEvent
 {
-
     protected override void OnCreate(Bundle? savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        ((AndroidDevice)MauiProgram.VpnHoodDevice).Prepare(this);
+        MauiProgram.CurrentUiContext = new AndroidUiContext(this);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        MauiProgram.CurrentUiContext = null;
     }
 }

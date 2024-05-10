@@ -36,18 +36,26 @@
                     TextColor="LightGreen"/>
             </HorizontalStackLayout>
 
-            <Label Margin="1" FontSize="Small" TextColor="Orange"
+            <Label Margin="1" FontSize="Small" TextColor="Blue"
                 Text="This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.Client.App, which provides a comprehensive set of extended functionalities."
                 />
 
             <StackLayout HorizontalOptions="Center">
                 <Label
-                HorizontalTextAlignment="Start"
-                Text="* For debugging on Windows, you need to disable requireAdministrator in app.manifest."/>
+                    HorizontalTextAlignment="Start"
+                    Padding="0,10,0,0"
+                    TextColor="IndianRed"
+                    Text="* This is a test server, and the session will be terminated in a few minutes."/>
 
                 <Label
-                HorizontalTextAlignment="Start"
-                Text="* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues"/>
+                    HorizontalTextAlignment="Start"
+                    Padding="0,10,0,0"
+                    Text="* For debugging on Windows, you need to disable requireAdministrator in app.manifest."/>
+
+                <Label
+                    HorizontalTextAlignment="Start"
+                    Padding="0,10,0,0"
+                    Text="* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues"/>
             </StackLayout>
 
         </VerticalStackLayout>

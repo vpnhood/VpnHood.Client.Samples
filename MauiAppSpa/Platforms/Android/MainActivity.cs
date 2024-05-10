@@ -27,7 +27,6 @@ public class MainActivity : VpnHoodMauiMainActivity
     {
         return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions
         {
-            AppUpdaterService = new GooglePlayAppUpdaterService(this)
         });
     }
 }

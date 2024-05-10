@@ -3,7 +3,6 @@ using Android.Content.PM;
 using Android.Service.QuickSettings;
 using Android.Views;
 using VpnHood.Client.App.Droid.Common.Activities;
-using VpnHood.Client.App.Droid.GooglePlay;
 using VpnHood.Client.App.Maui.Common;
 
 namespace VpnHood.Client.Samples.MauiAppForm;
@@ -27,7 +26,6 @@ public class MainActivity : VpnHoodMauiMainActivity
     {
         return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions
         {
-            AppUpdaterService = new GooglePlayAppUpdaterService(this)
         });
     }
 }

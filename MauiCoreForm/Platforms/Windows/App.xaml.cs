@@ -22,6 +22,7 @@ public partial class App : MauiWinUIApplication
 
     protected override MauiApp CreateMauiApp()
     {
+        MauiProgram.CurrentUiContext = new WinUiContext();
         return MauiProgram.CreateMauiApp(new WinDivertDevice());
     }
 

@@ -20,7 +20,6 @@ public class MainActivity : ActivityEvent
     protected override void OnCreate(Bundle? savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        Device.Prepare(this);
 
         // Set our simple view
         var mainView = new LinearLayout(this);
@@ -39,17 +38,23 @@ public class MainActivity : ActivityEvent
         mainView.AddView(linearLayout);
 
         // notes
-        var note1 = new TextView(this);
-        note1.SetPadding(note1.PaddingLeft, note1.PaddingTop + 30, note1.PaddingRight, note1.PaddingBottom);
-        note1.SetTextColor(Color.IndianRed);
-        note1.Text = "This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.Client.App, which provides a comprehensive set of extended functionalities.";
-        mainView.AddView(note1);
+        var note = new TextView(this);
+        note.SetPadding(note.PaddingLeft, note.PaddingTop + 30, note.PaddingRight, note.PaddingBottom);
+        note.SetTextColor(Color.Blue);
+        note.Text = "This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.Client.App, which provides a comprehensive set of extended functionalities.";
+        mainView.AddView(note);
 
-        var note2 = new TextView(this);
-        note2.SetPadding(note2.PaddingLeft, note2.PaddingTop + 30, note2.PaddingRight, note2.PaddingBottom);
-        note2.SetTextColor(Color.Black);
-        note2.Text = "* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues";
-        mainView.AddView(note2);
+        note = new TextView(this);
+        note.SetPadding(note.PaddingLeft, note.PaddingTop + 30, note.PaddingRight, note.PaddingBottom);
+        note.SetTextColor(Color.IndianRed);
+        note.Text = "* This is a test server, and the session will be terminated in a few minutes.";
+        mainView.AddView(note);
+
+        note = new TextView(this);
+        note.SetPadding(note.PaddingLeft, note.PaddingTop + 30, note.PaddingRight, note.PaddingBottom);
+        note.SetTextColor(Color.Black);
+        note.Text = "* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues";
+        mainView.AddView(note);
 
         SetContentView(mainView);
         UpdateUi();
@@ -74,9 +79,9 @@ public class MainActivity : ActivityEvent
             // Connect
             // accessKey must obtain from the server
             var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B");
-            var accessKey = "vh://eyJuYW1lIjoiVnBuSG9vZCBQdWJsaWMgU2VydmVycyIsInYiOjEsInNpZCI6MTAwMSwidGlkIjoiNWFhY2VjNTUtNWNhYy00NTdhLWFjYWQtMzk3Njk2OTIzNmY4Iiwic2VjIjoiNXcraUhNZXcwQTAzZ3c0blNnRFAwZz09IiwiaXN2IjpmYWxzZSwiaG5hbWUiOiJtby5naXdvd3l2eS5uZXQiLCJocG9ydCI6NDQzLCJjaCI6IjNnWE9IZTVlY3VpQzlxK3NiTzdobExva1FiQT0iLCJwYiI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy82YWlrdHFmM2xhZW9vaGY/ZGw9MSIsImVwIjpbIjUxLjgxLjIxMC4xNjQ6NDQzIl19";
+            var accessKey = "vh://eyJ2Ijo0LCJuYW1lIjoiVnBuSG9vZCBTYW1wbGUiLCJzaWQiOiIxMzAwIiwidGlkIjoiYTM0Mjk4ZDktY2YwYi00MGEwLWI5NmMtZGJhYjYzMWQ2MGVjIiwiaWF0IjoiMjAyNC0wNS0xMFQwNjo1MDozNC42ODQ4NjI4WiIsInNlYyI6Im9wcTJ6M0M0ak9rdHNodXl3c0VKNXc9PSIsImFkIjpmYWxzZSwic2VyIjp7ImN0IjoiMjAyNC0wNC0xNVQxOTo0NDozOVoiLCJobmFtZSI6Im1vLmdpd293eXZ5Lm5ldCIsImhwb3J0IjowLCJpc3YiOmZhbHNlLCJzZWMiOiJ2YUJxVTlSQzNRSGFXNHhGNWliWUZ3PT0iLCJjaCI6IjNnWE9IZTVlY3VpQzlxK3NiTzdobExva1FiQT0iLCJ1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdnBuaG9vZC9WcG5Ib29kLkZhcm1LZXlzL21haW4vRnJlZV9lbmNyeXB0ZWRfdG9rZW4udHh0IiwiZXAiOlsiNTEuODEuMjEwLjE2NDo0NDMiLCJbMjYwNDoyZGMwOjIwMjozMDA6OjVjZV06NDQzIl19fQ==";
             var token = Token.FromAccessKey(accessKey);
-            var packetCapture = await Device.CreatePacketCapture();
+            var packetCapture = await Device.CreatePacketCapture(new AndroidUiContext(this));
 
             _vpnHoodClient = new VpnHoodClient(packetCapture, clientId, token, new ClientOptions());
             _vpnHoodClient.StateChanged += (_, _) => UpdateUi();
