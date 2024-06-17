@@ -32,9 +32,8 @@ public partial class MainPage : ContentPage
             }
 
             // Connect
-            // accessKey must obtain from the server
             var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B");
-            var accessKey = "vh://eyJuYW1lIjoiVnBuSG9vZCBQdWJsaWMgU2VydmVycyIsInYiOjEsInNpZCI6MTAwMSwidGlkIjoiNWFhY2VjNTUtNWNhYy00NTdhLWFjYWQtMzk3Njk2OTIzNmY4Iiwic2VjIjoiNXcraUhNZXcwQTAzZ3c0blNnRFAwZz09IiwiaXN2IjpmYWxzZSwiaG5hbWUiOiJtby5naXdvd3l2eS5uZXQiLCJocG9ydCI6NDQzLCJjaCI6IjNnWE9IZTVlY3VpQzlxK3NiTzdobExva1FiQT0iLCJwYiI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy82YWlrdHFmM2xhZW9vaGY/ZGw9MSIsImVwIjpbIjUxLjgxLjIxMC4xNjQ6NDQzIl19";
+            const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
             var token = Token.FromAccessKey(accessKey);
             var packetCapture = await MauiProgram.VpnHoodDevice.CreatePacketCapture(MauiProgram.CurrentUiContext);
 
