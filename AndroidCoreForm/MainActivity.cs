@@ -1,6 +1,6 @@
 ﻿using Android.Graphics;
 using VpnHood.Client.Device.Droid;
-using VpnHood.Client.Device.Droid.Utils;
+using VpnHood.Client.Device.Droid.ActivityEvents;
 using VpnHood.Common;
 
 // ReSharper disable StringLiteralTypo

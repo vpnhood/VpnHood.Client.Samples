@@ -5,7 +5,7 @@ using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using VpnHood.Client.Device.Droid.Utils;
+using VpnHood.Client.Device.Droid.ActivityEvents;
 
 namespace VpnHood.Client.Samples.MauiCoreForm;
 
