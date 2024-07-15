@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Service.QuickSettings;
 using Android.Views;
+using VpnHood.Client.App.Maui.Common;
 using VpnHood.Client.Device.Droid;
 
 namespace VpnHood.Client.Samples.MauiCoreForm;
