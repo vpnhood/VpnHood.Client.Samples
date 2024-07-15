@@ -39,8 +39,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="VpnHood.Client" Version="4.6.540" />
-	  <PackageReference Include="VpnHood.Client.Device.Android" Version="4.6.540" />
+	  <PackageReference Include="VpnHood.Client" Version="4.6.544" />
+	  <PackageReference Include="VpnHood.Client.Device.Android" Version="4.6.544" />
 	</ItemGroup>
 
 </Project>
