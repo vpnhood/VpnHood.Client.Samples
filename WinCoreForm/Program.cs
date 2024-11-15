@@ -1,5 +1,6 @@
 ﻿using VpnHood.Client.Device.WinDivert;
 using VpnHood.Common;
+using VpnHood.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
 namespace VpnHood.Client.Samples.WinCoreConsole;
@@ -11,7 +12,7 @@ internal class Program
         Console.WriteLine("Hello VpnClient!");
 
         // a clientId should be generated for each client
-        var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0A");
+        var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0A").ToString();
         const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
         var token = Token.FromAccessKey(accessKey);
 

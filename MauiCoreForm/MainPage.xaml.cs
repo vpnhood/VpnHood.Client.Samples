@@ -1,4 +1,4 @@
-﻿using VpnHood.Common;
+﻿using VpnHood.Common.Tokens;
 
 namespace VpnHood.Client.Samples.MauiCoreForm;
 
@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
             }
 
             // Connect
-            var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B");
+            var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B").ToString();
             const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
             var token = Token.FromAccessKey(accessKey);
             var packetCapture = await MauiProgram.VpnHoodDevice.CreatePacketCapture(MauiProgram.CurrentUiContext);

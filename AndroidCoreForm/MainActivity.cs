@@ -2,6 +2,7 @@
 using VpnHood.Client.Device.Droid;
 using VpnHood.Client.Device.Droid.ActivityEvents;
 using VpnHood.Common;
+using VpnHood.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
 namespace VpnHood.Client.Samples.AndroidCoreForm;
@@ -77,7 +78,7 @@ public class MainActivity : ActivityEvent
             }
 
             // a unique id of your client
-            var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B");
+            var clientId = Guid.Parse("7BD6C156-EEA3-43D5-90AF-B118FE47ED0B").ToString();
             const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
             var token = Token.FromAccessKey(accessKey);
             var packetCapture = await Device.CreatePacketCapture(new AndroidUiContext(this));

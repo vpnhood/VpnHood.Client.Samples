@@ -8,16 +8,16 @@ public partial class App : Application
     public App()
     {
         InitializeComponent();
-
-        MainPage = new MainPage();
     }
 
     protected override Window CreateWindow(IActivationState? activationState)
     {
-        var window = base.CreateWindow(activationState);
-        window.Width = VpnHoodApp.Instance.Resource.WindowSize.Width;
-        window.Height = VpnHoodApp.Instance.Resource.WindowSize.Height;
-        window.Title = VpnHoodApp.Instance.Resource.Strings.AppName;
+        var window = new Window(new MainPage())
+        {
+            Width = VpnHoodApp.Instance.Resource.WindowSize.Width,
+            Height = VpnHoodApp.Instance.Resource.WindowSize.Height,
+            Title = VpnHoodApp.Instance.Resource.Strings.AppName
+        };
         return window;
     }
 
