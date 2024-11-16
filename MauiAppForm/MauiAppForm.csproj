@@ -70,13 +70,13 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.10" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.10" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-		<PackageReference Include="VpnHood.Client.App" Version="4.7.585-prerelease" />
-		<PackageReference Include="VpnHood.Client.App.Resources" Version="4.7.585-prerelease" />
-		<PackageReference Include="VpnHood.Client.App.Maui.Common" Version="4.7.585-prerelease" />
+		<PackageReference Include="VpnHood.Client.App" Version="4.7.586" />
+		<PackageReference Include="VpnHood.Client.App.Resources" Version="4.7.586" />
+		<PackageReference Include="VpnHood.Client.App.Maui.Common" Version="4.7.586" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android35.0'">
-		<PackageReference Include="VpnHood.Client.App.Android.GooglePlay.Core" Version="4.7.585-prerelease" />
+		<PackageReference Include="VpnHood.Client.App.Android.GooglePlay.Core" Version="4.7.586" />
 	</ItemGroup>
 
 </Project>
