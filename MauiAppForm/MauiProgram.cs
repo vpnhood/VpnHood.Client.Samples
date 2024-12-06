@@ -19,12 +19,11 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        var resource = DefaultAppResource.Resource;
+        var resource = DefaultAppResource.Resources;
         resource.Strings.AppName = "VpnHood Client Sample";
         const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
-        VpnHoodMauiApp.Init(new AppOptions
+        VpnHoodMauiApp.Init(new AppOptions("com.vpnhood.client.sample")
         {
-            AppId = "com.vpnhood.client.sample",
             Resource = resource, 
             AccessKeys = [accessKey]
         });
