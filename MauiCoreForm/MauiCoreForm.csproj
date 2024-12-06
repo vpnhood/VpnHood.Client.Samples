@@ -67,20 +67,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.10" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.10" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.12" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.12" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-		<PackageReference Include="VpnHood.Client" Version="4.7.586" />
+		<PackageReference Include="VpnHood.Client" Version="5.0.606" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-windows10.0.19041.0'">
-		<PackageReference Include="VpnHood.Client.Device.WinDivert" Version="4.7.586" />
+		<PackageReference Include="VpnHood.Client.Device.WinDivert" Version="5.0.606" />
 	</ItemGroup>
 
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android35.0'">
-		<PackageReference Include="VpnHood.Client.App.Maui.Common" Version="4.7.586" />
-		<PackageReference Include="VpnHood.Client.Device.Android" Version="4.7.586" />
+		<PackageReference Include="VpnHood.Client.App.Maui.Common" Version="5.0.592" />
+		<PackageReference Include="VpnHood.Client.Device.Android" Version="5.0.606" />
 	</ItemGroup>
 
 </Project>
