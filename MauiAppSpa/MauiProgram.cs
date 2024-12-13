@@ -23,21 +23,29 @@ public static class MauiProgram
         var resource = DefaultAppResource.Resources;
         resource.Strings.AppName = "VpnHood Client Sample";
         const string accessKey = ClientOptions.SampleAccessKey; // This is for test purpose only and can not be used in production
-        VpnHoodMauiApp.Init(new AppOptions("com.vpnhood.client.sample")
+        VpnHoodMauiApp.Init(new AppOptions("com.vpnhood.client.sample", IsDebugMode)
         {
-            Resource = resource, 
+            Resource = resource,
             AccessKeys = [accessKey]
         });
 
         // init web server with spa zip data
         ArgumentNullException.ThrowIfNull(VpnHoodApp.Instance.Resource.SpaZipData);
-        using var memoryStream = new MemoryStream(VpnHoodApp.Instance.Resource.SpaZipData);
-        VpnHoodAppWebServer.Init(memoryStream);
+        using var spaZipStream = new MemoryStream(VpnHoodApp.Instance.Resource.SpaZipData);
+        VpnHoodAppWebServer.Init(new WebServerOptions
+        {
+            SpaZipStream = spaZipStream
+        });
 
-#if DEBUG
-        builder.Logging.AddDebug();
-#endif
+        if (IsDebugMode)
+            builder.Logging.AddDebug();
 
         return builder.Build();
     }
+
+#if DEBUG
+    public static bool IsDebugMode => true;
+#else
+    public static bool IsDebugMode => false;
+#endif
 }
