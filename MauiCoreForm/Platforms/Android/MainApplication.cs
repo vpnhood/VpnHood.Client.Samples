@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.Runtime;
-using VpnHood.Client.Device.Droid;
+using VpnHood.Core.Client.Device.Droid;
 
 namespace VpnHood.Client.Samples.MauiCoreForm;
 

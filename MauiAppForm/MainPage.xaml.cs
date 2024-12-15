@@ -1,4 +1,4 @@
-﻿using VpnHood.Client.App;
+﻿using VpnHood.AppLib;
 
 namespace VpnHood.Client.Samples.MauiAppForm;
 

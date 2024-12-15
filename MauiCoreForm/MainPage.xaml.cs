@@ -1,4 +1,5 @@
-﻿using VpnHood.Common.Tokens;
+﻿using VpnHood.Core.Client;
+using VpnHood.Core.Common.Tokens;
 
 namespace VpnHood.Client.Samples.MauiCoreForm;
 

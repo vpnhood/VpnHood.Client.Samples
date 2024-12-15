@@ -1,8 +1,8 @@
 ﻿using Android.Graphics;
-using VpnHood.Client.Device.Droid;
-using VpnHood.Client.Device.Droid.ActivityEvents;
-using VpnHood.Common;
-using VpnHood.Common.Tokens;
+using VpnHood.Core.Client;
+using VpnHood.Core.Client.Device.Droid;
+using VpnHood.Core.Client.Device.Droid.ActivityEvents;
+using VpnHood.Core.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
 namespace VpnHood.Client.Samples.AndroidCoreForm;
@@ -42,7 +42,7 @@ public class MainActivity : ActivityEvent
         var note = new TextView(this);
         note.SetPadding(note.PaddingLeft, note.PaddingTop + 30, note.PaddingRight, note.PaddingBottom);
         note.SetTextColor(Color.Blue);
-        note.Text = "This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.Client.App, which provides a comprehensive set of extended functionalities.";
+        note.Text = "This sample demonstrates how to connect to a VpnHoodServer using the VpnHoodClient. However, developing a fully functional VPN application involves much more, including handling UI commands, accounting, billing, advertising, notifications, managing keys, handling reconnections, handling exceptions, acquiring permissions, leveraging OS features such as Tile, Always ON, among other considerations. Consider using VpnHood.AppLib, which provides a comprehensive set of extended functionalities.";
         mainView.AddView(note);
 
         note = new TextView(this);

@@ -2,9 +2,9 @@
 using Android.Content.PM;
 using Android.Service.QuickSettings;
 using Android.Views;
-using VpnHood.Client.App.Droid.Common.Activities;
-using VpnHood.Client.App.Droid.GooglePlay;
-using VpnHood.Client.App.Maui.Common;
+using VpnHood.AppLib.Droid.Common.Activities;
+using VpnHood.AppLib.Droid.GooglePlay;
+using VpnHood.AppLib.Maui.Common;
 
 namespace VpnHood.Client.Samples.MauiAppSpa;
 

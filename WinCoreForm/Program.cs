@@ -1,6 +1,6 @@
-﻿using VpnHood.Client.Device.WinDivert;
-using VpnHood.Common;
-using VpnHood.Common.Tokens;
+﻿using VpnHood.Core.Client;
+using VpnHood.Core.Client.Device.WinDivert;
+using VpnHood.Core.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
 namespace VpnHood.Client.Samples.WinCoreConsole;
