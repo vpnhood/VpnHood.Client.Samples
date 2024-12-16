@@ -1,6 +1,6 @@
 ﻿namespace VpnHood.Client.Samples.MauiCoreForm;
 
-public partial class App : Application
+public partial class App
 {
     public App()
     {

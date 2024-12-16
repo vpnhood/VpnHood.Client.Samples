@@ -2,7 +2,7 @@
 
 namespace VpnHood.Client.Samples.MauiAppSpa;
 
-public partial class MainPage : ContentPage
+public partial class MainPage
 {
     public MainPage()
     {

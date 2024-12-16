@@ -3,7 +3,7 @@ using VpnHood.AppLib.WebServer;
 
 namespace VpnHood.Client.Samples.MauiAppSpa;
 
-public partial class App : Application
+public partial class App
 {
     public App()
     {

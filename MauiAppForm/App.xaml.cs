@@ -2,7 +2,7 @@
 using VpnHood.AppLib;
 
 namespace VpnHood.Client.Samples.MauiAppForm;
-public partial class App : Application
+public partial class App
 {
     public App()
     {
