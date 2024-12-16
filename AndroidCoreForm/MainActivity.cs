@@ -5,7 +5,7 @@ using VpnHood.Core.Client.Device.Droid.ActivityEvents;
 using VpnHood.Core.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
-namespace VpnHood.Client.Samples.AndroidCoreForm;
+namespace VpnHood.App.CoreSample.AndroidForm;
 
 [Activity(Label = "@string/app_name", MainLauncher = true)]
 // ReSharper disable once UnusedMember.Global

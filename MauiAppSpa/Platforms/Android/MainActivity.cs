@@ -5,7 +5,7 @@ using VpnHood.AppLib.Droid.Common.Constants;
 using VpnHood.AppLib.Maui.Common;
 
 // ReSharper disable once CheckNamespace
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.App.AppLibSample.MauiSpa;
 
 [Activity(
     Theme = "@style/Maui.SplashTheme",

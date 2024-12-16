@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.App.AppLibSample.MauiSpa;
 
 public class Program
 {

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace VpnHood.Client.Samples.MauiAppForm;
+namespace VpnHood.App.AppLibSample.MauiForm;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

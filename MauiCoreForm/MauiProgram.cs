@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using VpnHood.Core.Client.Device;
 
-namespace VpnHood.Client.Samples.MauiCoreForm;
+namespace VpnHood.App.CoreSample.MauiForm;
 
 public static class MauiProgram
 {

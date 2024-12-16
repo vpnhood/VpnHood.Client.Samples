@@ -5,7 +5,7 @@ using VpnHood.AppLib.Droid.Common.Constants;
 using VpnHood.AppLib.Maui.Common;
 using VpnHood.Core.Client.Device.Droid;
 
-namespace VpnHood.Client.Samples.MauiCoreForm;
+namespace VpnHood.App.CoreSample.MauiForm;
 
 [Activity(
     Theme = "@style/Maui.SplashTheme",

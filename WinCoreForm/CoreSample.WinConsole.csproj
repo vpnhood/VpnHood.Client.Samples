@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Description>Simple VpnHood Client usage for Windows</Description>
+		<Description>Simple VpnHood Client sample for Windows using VpnHood Core</Description>
 		<TargetFramework>net9.0</TargetFramework>
 		<OutputType>Exe</OutputType>
-		<RootNamespace>VpnHood.Client.Samples.WinCoreConsole</RootNamespace>
+		<RootNamespace>VpnHood.App.CoreSample.WinConsole</RootNamespace>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -27,6 +27,10 @@
 	<ItemGroup>
 		<PackageReference Include="VpnHood.Core.Client" Version="5.0.619-prerelease" />
 		<PackageReference Include="VpnHood.Core.Client.Device.WinDivert" Version="5.0.619-prerelease" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\" />
 	</ItemGroup>
 
 </Project>

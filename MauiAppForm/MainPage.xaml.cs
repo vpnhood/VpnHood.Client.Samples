@@ -1,6 +1,6 @@
 ﻿using VpnHood.AppLib;
 
-namespace VpnHood.Client.Samples.MauiAppForm;
+namespace VpnHood.App.AppLibSample.MauiForm;
 
 // ReSharper disable once RedundantExtendsListEntry
 public partial class MainPage : ContentPage

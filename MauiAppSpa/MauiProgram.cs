@@ -5,7 +5,7 @@ using VpnHood.AppLib.WebServer;
 using VpnHood.AppLib.Maui.Common;
 using VpnHood.Core.Client;
 
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.App.AppLibSample.MauiSpa;
 
 // ReSharper disable StringLiteralTypo
 public static class MauiProgram

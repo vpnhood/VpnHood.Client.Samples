@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "SampleClient.Win": {
-      "commandName": "Executable",
-      "executablePath": "dotnet",
-      "commandLineArgs": "WinCoreConsole.dll"
-    }
-  }
-}

@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Description>Simple VpnHood Client usage for Android</Description>
-		<TargetFramework>net9.0-android35.0</TargetFramework>
-		<RootNamespace>VpnHood.Client.Samples.AndroidCoreForm</RootNamespace>
-		<OutputType>Exe</OutputType>
-		<ApplicationId>com.vpnhood.client.android.sample</ApplicationId>
+		<Description>Simple VpnHood! Client Sample usage for AndroidForm by AppLib</Description>
+		<ApplicationTitle>VpnHood! CoreSample AndroidForm</ApplicationTitle>
+		<RootNamespace>VpnHood.App.CoreSample.AndroidForm</RootNamespace>
+		<ApplicationId>com.vpnhood.coresample.AndroidForm</ApplicationId>		
 		<ApplicationVersion>438</ApplicationVersion>
+		<TargetFramework>net9.0-android35.0</TargetFramework>
+		<OutputType>Exe</OutputType>
 		<ApplicationDisplayVersion>3.2.438</ApplicationDisplayVersion>
 		<SupportedOSPlatformVersion>23.0</SupportedOSPlatformVersion>
 	</PropertyGroup>

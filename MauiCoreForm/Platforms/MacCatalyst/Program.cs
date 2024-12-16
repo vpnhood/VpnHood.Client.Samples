@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace VpnHood.Client.Samples.MauiCoreForm;
+namespace VpnHood.App.CoreSample.MauiForm;
 
 public class Program
 {

@@ -4,7 +4,7 @@
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 // ReSharper disable once CheckNamespace
-namespace VpnHood.Client.Samples.MauiAppSpa.WinUI;
+namespace VpnHood.App.AppLibSample.MauiSpa.WinUI;
 
 
 /// <summary>

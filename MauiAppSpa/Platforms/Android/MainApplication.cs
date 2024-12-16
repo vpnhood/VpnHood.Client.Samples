@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.App.AppLibSample.MauiSpa;
 
 
 [Application]

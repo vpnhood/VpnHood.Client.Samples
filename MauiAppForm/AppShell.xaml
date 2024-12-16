@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="VpnHood.Client.Samples.MauiAppForm.AppShell"
+    x:Class="VpnHood.App.AppLibSample.MauiForm.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:mauiAppForm="clr-namespace:VpnHood.Client.Samples.MauiAppForm"
+    xmlns:mauiAppForm="clr-namespace:VpnHood.App.AppLibSample.MauiForm"
     FlyoutBehavior="Disabled"
-    Title="MauiAppForm">
+    Title="VpnHoo! AppLibSample MauiForm">
 
     <ShellContent
         Title="Home"

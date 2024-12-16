@@ -1,4 +1,4 @@
-﻿namespace VpnHood.Client.Samples.MauiAppForm;
+﻿namespace VpnHood.App.AppLibSample.MauiForm;
 
 public partial class AppShell
 {

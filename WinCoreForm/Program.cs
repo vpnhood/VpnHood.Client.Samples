@@ -3,7 +3,7 @@ using VpnHood.Core.Client.Device.WinDivert;
 using VpnHood.Core.Common.Tokens;
 
 // ReSharper disable StringLiteralTypo
-namespace VpnHood.Client.Samples.WinCoreConsole;
+namespace VpnHood.App.CoreSample.WinConsole;
 
 internal class Program
 {
@@ -20,7 +20,9 @@ internal class Program
         var vpnHoodClient = new VpnHoodClient(packetCapture, clientId, token, new ClientOptions());
 
         // connect to VpnHood server
+        Console.WriteLine("Connecting...");
         vpnHoodClient.Connect().Wait();
+        Console.WriteLine("Connected.");
 
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\nIP logging is enabled on these servers. Please follow United States law, especially if using torrent. Read privacy policy before use: https://github.com/vpnhood/VpnHood/blob/main/PRIVACY.md\n");

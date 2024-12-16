@@ -2,7 +2,7 @@
 using Android.Runtime;
 using VpnHood.Core.Client.Device.Droid;
 
-namespace VpnHood.Client.Samples.MauiCoreForm;
+namespace VpnHood.App.CoreSample.MauiForm;
 
 
 [Application]

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppSpa", "MauiAppSpa\MauiAppSpa.csproj", "{C5277BEF-1771-4D8F-8DFB-0B316A3696B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLibSample.MauiSpa", "MauiAppSpa\AppLibSample.MauiSpa.csproj", "{C5277BEF-1771-4D8F-8DFB-0B316A3696B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppForm", "MauiAppForm\MauiAppForm.csproj", "{C5F1F07A-2568-409A-8CAF-DCDDC126B477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLibSample.MauiForm", "MauiAppForm\AppLibSample.MauiForm.csproj", "{C5F1F07A-2568-409A-8CAF-DCDDC126B477}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCoreForm", "MauiCoreForm\MauiCoreForm.csproj", "{93AC8755-A524-416A-AB49-081E5A31BB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreSample.MauiForm", "MauiCoreForm\CoreSample.MauiForm.csproj", "{93AC8755-A524-416A-AB49-081E5A31BB9C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidCoreForm", "AndroidCoreForm\AndroidCoreForm.csproj", "{433A2E2B-FD65-4FC8-965D-3FB891745D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreSample.AndroidForm", "AndroidCoreForm\CoreSample.AndroidForm.csproj", "{433A2E2B-FD65-4FC8-965D-3FB891745D6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinCoreConsole", "WinCoreForm\WinCoreConsole.csproj", "{44540289-D825-44F4-BE79-66D6B6B65E7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreSample.WinConsole", "WinCoreForm\CoreSample.WinConsole.csproj", "{44540289-D825-44F4-BE79-66D6B6B65E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 ﻿using VpnHood.Core.Client.Device;
 
-namespace VpnHood.Client.Samples.MauiCoreForm.WinUI;
+namespace VpnHood.App.CoreSample.MauiForm.WinUI;
 
 public class WinUiContext : IUiContext
 {

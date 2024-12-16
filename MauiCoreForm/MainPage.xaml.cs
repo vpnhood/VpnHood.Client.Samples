@@ -1,7 +1,7 @@
 ﻿using VpnHood.Core.Client;
 using VpnHood.Core.Common.Tokens;
 
-namespace VpnHood.Client.Samples.MauiCoreForm;
+namespace VpnHood.App.CoreSample.MauiForm;
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable once RedundantExtendsListEntry

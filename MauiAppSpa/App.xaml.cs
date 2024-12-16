@@ -1,7 +1,7 @@
 ﻿using VpnHood.AppLib;
 using VpnHood.AppLib.WebServer;
 
-namespace VpnHood.Client.Samples.MauiAppSpa;
+namespace VpnHood.App.AppLibSample.MauiSpa;
 
 public partial class App
 {
