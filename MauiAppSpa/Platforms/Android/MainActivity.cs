@@ -3,9 +3,9 @@ using Android.Content.PM;
 using Android.Service.QuickSettings;
 using Android.Views;
 using VpnHood.AppLib.Droid.Common.Activities;
-using VpnHood.AppLib.Droid.GooglePlay;
 using VpnHood.AppLib.Maui.Common;
 
+// ReSharper disable once CheckNamespace
 namespace VpnHood.Client.Samples.MauiAppSpa;
 
 [Activity(
@@ -25,8 +25,6 @@ public class MainActivity : VpnHoodMauiMainActivity
 {
     protected override AndroidAppMainActivityHandler CreateMainActivityHandler()
     {
-        return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions
-        {
-        });
+        return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions());
     }
 }
