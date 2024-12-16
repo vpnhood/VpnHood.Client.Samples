@@ -8,8 +8,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        UpdateUi();
+        VpnHoodApp.Instance.ClearLastError();
         VpnHoodApp.Instance.ConnectionStateChanged += (_, _) => UpdateUi();
+        UpdateUi();
     }
 
     private void OnConnectClicked(object sender, EventArgs e)
@@ -40,6 +41,7 @@ public partial class MainPage : ContentPage
             StatusLabel.Text = VpnHoodApp.Instance.State.ConnectionState.ToString();
             CounterBtn.IsEnabled = VpnHoodApp.Instance.State.CanConnect || VpnHoodApp.Instance.State.CanDisconnect;
             CounterBtn.Text = VpnHoodApp.Instance.State.CanConnect ? "Connect" : "Disconnect";
+            ErrorLabel.Text = VpnHoodApp.Instance.State.LastError != null ? $"Error: {VpnHoodApp.Instance.State.LastError?.Message}" : string.Empty;
         });
     }
 }

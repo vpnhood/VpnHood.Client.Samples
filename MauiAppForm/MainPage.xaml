@@ -9,11 +9,11 @@
             Spacing="25">
             <Image
                 Source="vpnhood.png"
-                HeightRequest="185"
+                HeightRequest="100"
                 Aspect="AspectFit"/>
 
             <Label
-                Text="VpnHood Maui Sample (App Module)"
+                Text="VpnHood Maui Sample (AppLib)"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level2"/>
 
@@ -27,22 +27,30 @@
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Label VerticalTextAlignment="Center"
                     Text="Connection State:"
-                    FontSize="Medium"
+                    FontSize="Small"
                     Margin="5"/>
                 <Label VerticalTextAlignment="Center"
                     x:Name="StatusLabel"
                     Text=""
-                    FontSize="Medium"
+                    FontSize="Small"
                     TextColor="LightGreen"/>
             </HorizontalStackLayout>
 
-            <StackLayout HorizontalOptions="Center">
+            <StackLayout HorizontalOptions="Center" Margin="0">
+                <Label VerticalTextAlignment="Center"
+                       Margin="5"
+                       x:Name="ErrorLabel"
+                       Text=""
+                       TextColor="Red"/>
+
                 <Label
                 HorizontalTextAlignment="Start"
+                Margin="5"
                 Text="* For debugging on Windows, you need to disable requireAdministrator in app.manifest."/>
 
                 <Label
                 HorizontalTextAlignment="Start"
+                Margin="5"
                 Text="* Please contact us if this sample is outdated or not working. Report issues at: https://github.com/vpnhood/VpnHood/issues"/>
             </StackLayout>
 

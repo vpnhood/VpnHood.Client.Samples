@@ -23,6 +23,7 @@ public partial class App
     protected override void CleanUp()
     {
         base.CleanUp();
-        if (VpnHoodApp.IsInit) _ = VpnHoodApp.Instance.DisposeAsync();
+        if (VpnHoodApp.IsInit) 
+            _ = VpnHoodApp.Instance.DisposeAsync();
     }
 }
