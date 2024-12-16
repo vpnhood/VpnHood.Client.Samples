@@ -17,10 +17,3 @@ using Android.App;
 [assembly: UsesPermission(Name = Manifest.Permission.ForegroundService)] // required for VPN
 [assembly: UsesPermission(Name = Manifest.Permission.ForegroundServiceSystemExempted)] // required for VPN
 [assembly: UsesPermission(Name = Manifest.Permission.StartForegroundServicesFromBackground)] // required for VPN
-
-namespace VpnHood.Client.Samples.MauiCoreForm;
-
-
-public static class AssemblyInfo
-{
-}

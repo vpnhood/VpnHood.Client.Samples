@@ -20,8 +20,6 @@ public class MainActivity : VpnHoodMauiMainActivity
 {
     protected override AndroidAppMainActivityHandler CreateMainActivityHandler()
     {
-        return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions
-        {
-        });
+        return new AndroidAppMainActivityHandler(this, new AndroidMainActivityOptions());
     }
 }

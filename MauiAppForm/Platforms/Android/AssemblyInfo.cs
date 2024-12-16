@@ -9,10 +9,3 @@ using Android.App;
 
 [assembly: UsesFeature("android.software.leanback", Required = false)]
 [assembly: UsesFeature("android.hardware.touchscreen", Required = false)]
-
-namespace VpnHood.Client.Samples.MauiAppForm;
-
-
-public static class AssemblyInfo
-{
-}
